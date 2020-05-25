@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0"
+            prefWidth="928.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.GuiController">
+    <Label layoutX="14.0" layoutY="22.0" prefHeight="17.0" prefWidth="95.0" text="Choose player 1"/>
+    <Circle id="ColorPlayer1" fill="RED" layoutX="246.0" layoutY="31.0" radius="9.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle id="ColorPlayer1" fill="YELLOW" layoutX="246.0" layoutY="63.0" radius="9.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <ChoiceBox fx:id="choiceBoxPlayer1" layoutX="122.0" layoutY="18.0" prefHeight="25.0" prefWidth="109.0"
+               value="Human">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Human"/>
+                <String fx:value="Minmax"/>
+                <String fx:value="AlphaBeta"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="95.0" text="Choose player 2"/>
+    <ChoiceBox fx:id="choiceBoxPlayer2" layoutX="122.0" layoutY="50.0" prefHeight="25.0" prefWidth="109.0"
+               value="Human">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Human"/>
+                <String fx:value="Minmax"/>
+                <String fx:value="AlphaBeta"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label fx:id="label1Eval" layoutX="14.0" layoutY="119.0" text="Computer 1 evaluation method"/>
+    <Label fx:id="label1Depth" layoutX="21.0" layoutY="175.0" text="Computer 1 search depth"/>
+    <ChoiceBox fx:id="choiceBox1Eval" layoutX="23.0" layoutY="136.0" prefWidth="150.0"
+               value="Series">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Series"/>
+                <String fx:value="Possibilities"/>
+                <String fx:value="Weights"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="choiceBox1Depth" layoutX="22.0" layoutY="192.0" prefWidth="150.0"
+               value="6">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="1"/>
+                <String fx:value="2"/>
+                <String fx:value="3"/>
+                <String fx:value="4"/>
+                <String fx:value="5"/>
+                <String fx:value="6"/>
+                <String fx:value="7"/>
+                <String fx:value="8"/>
+                <String fx:value="9"/>
+                <String fx:value="10"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label fx:id="label2Eval" layoutX="14.0" layoutY="249.0" text="Computer 2 evaluation method"/>
+    <ChoiceBox fx:id="choiceBox2Eval" layoutX="22.0" layoutY="266.0" prefWidth="150.0"
+               value="Series">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Series"/>
+                <String fx:value="Possibilities"/>
+                <String fx:value="Weights"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="choiceBox2Depth" layoutX="22.0" layoutY="323.0" prefWidth="150.0"
+               value="6">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="1"/>
+                <String fx:value="2"/>
+                <String fx:value="3"/>
+                <String fx:value="4"/>
+                <String fx:value="5"/>
+                <String fx:value="6"/>
+                <String fx:value="7"/>
+                <String fx:value="8"/>
+                <String fx:value="9"/>
+                <String fx:value="10"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Label fx:id="label2Depth" layoutX="21.0" layoutY="306.0" text="Computer 2 search depth"/>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="459.0" layoutX="355.0" layoutY="8.0"
+               stroke="BLACK" strokeType="INSIDE" width="564.0"/>
+    <Circle fx:id="field45" fill="WHITE" layoutX="790.0" layoutY="353.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Button fx:id="buttonStart" layoutX="54.0" layoutY="383.0" mnemonicParsing="false" prefHeight="42.0"
+            prefWidth="88.0" text="Start" onAction="#startButtonAction"/>
+    <Circle fx:id="field06" fill="WHITE" layoutX="865.0" layoutY="54.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field16" fill="WHITE" layoutX="865.0" layoutY="128.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field26" fill="WHITE" layoutX="865.0" layoutY="205.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field36" fill="WHITE" layoutX="865.0" layoutY="279.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field46" fill="WHITE" layoutX="865.0" layoutY="353.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field56" fill="WHITE" layoutX="865.0" layoutY="425.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field55" fill="WHITE" layoutX="790.0" layoutY="425.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field35" fill="WHITE" layoutX="790.0" layoutY="279.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field25" fill="WHITE" layoutX="790.0" layoutY="205.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field15" fill="WHITE" layoutX="790.0" layoutY="128.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field05" fill="WHITE" layoutX="790.0" layoutY="54.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field43" fill="WHITE" layoutX="637.0" layoutY="352.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field04" fill="WHITE" layoutX="714.0" layoutY="53.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field14" fill="WHITE" layoutX="714.0" layoutY="127.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field24" fill="WHITE" layoutX="714.0" layoutY="204.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field34" fill="WHITE" layoutX="714.0" layoutY="278.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field44" fill="WHITE" layoutX="714.0" layoutY="352.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field54" fill="WHITE" layoutX="714.0" layoutY="424.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field53" fill="WHITE" layoutX="637.0" layoutY="424.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field33" fill="WHITE" layoutX="637.0" layoutY="278.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field23" fill="WHITE" layoutX="637.0" layoutY="204.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field13" fill="WHITE" layoutX="637.0" layoutY="127.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field03" fill="WHITE" layoutX="637.0" layoutY="53.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field42" fill="WHITE" layoutX="562.0" layoutY="351.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field52" fill="WHITE" layoutX="562.0" layoutY="423.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field32" fill="WHITE" layoutX="562.0" layoutY="277.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field22" fill="WHITE" layoutX="562.0" layoutY="203.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field12" fill="WHITE" layoutX="562.0" layoutY="126.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field02" fill="WHITE" layoutX="562.0" layoutY="52.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field40" fill="WHITE" layoutX="409.0" layoutY="350.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field01" fill="WHITE" layoutX="484.0" layoutY="51.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field11" fill="WHITE" layoutX="484.0" layoutY="125.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field21" fill="WHITE" layoutX="484.0" layoutY="202.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field31" fill="WHITE" layoutX="484.0" layoutY="276.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field41" fill="WHITE" layoutX="484.0" layoutY="350.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field51" fill="WHITE" layoutX="484.0" layoutY="422.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field50" fill="WHITE" layoutX="409.0" layoutY="422.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field30" fill="WHITE" layoutX="409.0" layoutY="276.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field20" fill="WHITE" layoutX="409.0" layoutY="202.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field10" fill="WHITE" layoutX="409.0" layoutY="125.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Circle fx:id="field00" fill="WHITE" layoutX="409.0" layoutY="51.0" radius="33.0" stroke="BLACK"
+            strokeType="INSIDE"/>
+    <Rectangle fx:id="button1Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="369.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column1Action" onMouseEntered="#enteredColumn1"
+               onMouseExited="#exitedColumn1"/>
+    <Rectangle fx:id="button2Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="446.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column2Action" onMouseEntered="#enteredColumn2"
+               onMouseExited="#exitedColumn2"/>
+    <Rectangle fx:id="button3Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="523.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column3Action" onMouseEntered="#enteredColumn3"
+               onMouseExited="#exitedColumn3"/>
+    <Rectangle fx:id="button4Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="600.0"
+               layoutY="8.0" width="76.0" onMouseClicked="#column4Action" onMouseEntered="#enteredColumn4"
+               onMouseExited="#exitedColumn4"/>
+    <Rectangle fx:id="button5Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="676.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column5Action" onMouseEntered="#enteredColumn5"
+               onMouseExited="#exitedColumn5"/>
+    <Rectangle fx:id="button6Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="753.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column6Action" onMouseEntered="#enteredColumn6"
+               onMouseExited="#exitedColumn6"/>
+    <Rectangle fx:id="button7Column" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="459.0" layoutX="830.0"
+               layoutY="8.0" width="77.0" onMouseClicked="#column7Action" onMouseEntered="#enteredColumn7"
+               onMouseExited="#exitedColumn7"/>
+    <Label fx:id="labelResult" layoutX="75.0" layoutY="463.0" prefHeight="59.0" prefWidth="200.0">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+</AnchorPane>
